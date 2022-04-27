@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="MaasPane" prefHeight="600.0" prefWidth="766.0" style="-fx-background-color: #181818;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kislayonetim.MaasController">
+   <children>
+      <Text fill="WHITE" layoutX="289.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Maaş Ödeme">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Text>
+      <ToolBar layoutX="25.0" layoutY="115.0" prefHeight="40.0" prefWidth="745.0" style="-fx-background-color: #181818;">
+         <items>
+            <TextField fx:id="NumaraF" prefHeight="25.0" prefWidth="166.0" promptText="Personel Numarası Giriniz" />
+            <TextField fx:id="NobetF" prefHeight="25.0" prefWidth="166.0" promptText="Kaç Kere Nöbet Tuttu Giriniz" />
+            <TextField fx:id="operasyonF" prefHeight="25.0" prefWidth="202.0" promptText="Kaç Tane Operasyona Katıldı Giriniz" />
+            <SplitMenuButton mnemonicParsing="false" prefHeight="0.0" prefWidth="166.0" text="Personel Türü Seçiniz">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#subayMaas" text="Subay Maaş">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resim/army.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#astsubayMaas" text="Astsubay Maaş">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resim/army%20(1).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#erMaas" text="Er Maaş">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resim/soldier%20(4).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#doktorMaas" text="Doktor Maaş">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resim/doctor.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#memurMaas" text="Memur Maaş">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resim/officer.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#asciMaas" text="Aşçı Maaş">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resim/chef.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+               </items>
+            </SplitMenuButton>
+         </items>
+      </ToolBar>
+      <TableView fx:id="OdemeTablo" layoutX="25.0" layoutY="177.0" prefHeight="333.0" prefWidth="713.0" style="-fx-background-color: #181818;">
+         <columns>
+            <TableColumn fx:id="PersonelTablo" minWidth="120.0" prefWidth="120.0" text="Personel Türü" />
+            <TableColumn fx:id="OperasyonTablo" minWidth="170.0" prefWidth="170.0" text="Katıldığı Operasyon Sayısı" />
+            <TableColumn fx:id="NobetTablo" minWidth="150.0" prefWidth="150.0" text="Tuttuğu Nöbet Sayısı" />
+            <TableColumn fx:id="NumaraTablo" minWidth="150.0" prefWidth="150.0" text="Personelin Numarası" />
+            <TableColumn fx:id="MaasTablo" minWidth="120.0" prefWidth="120.0" text="Maaş" />
+         </columns>
+      </TableView>
+      <Button layoutX="438.0" layoutY="550.0" mnemonicParsing="false" onAction="#Yenile" style="-fx-background-color: #8C0001;" text="Yenile" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="251.0" layoutY="550.0" mnemonicParsing="false" onAction="#Ode" style="-fx-background-color: #8C0001;" text="Öde" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Label fx:id="MaasLabel" layoutX="228.0" layoutY="518.0" prefHeight="26.0" prefWidth="180.0" style="-fx-background-color: #181818;" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Button layoutX="65.0" layoutY="49.0" mnemonicParsing="false" onAction="#Geri" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: 8C0001;">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0">
+               <image>
+                  <Image url="@../resim/back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

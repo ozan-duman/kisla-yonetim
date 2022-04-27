@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="AstsubayPane" prefHeight="600.0" prefWidth="766.0" style="-fx-background-color: #181818;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kislayonetim.AstsubayController">
+   <children>
+      <TableView fx:id="AstsubayTablo" layoutX="20.0" layoutY="154.0" prefHeight="292.0" prefWidth="723.0" style="-fx-background-color: #181818;">
+         <columns>
+            <TableColumn fx:id="AstsubayAdTablo" minWidth="120.0" prefWidth="120.0" text="Ad" />
+            <TableColumn fx:id="AstsubaySoyadTablo" minWidth="120.0" prefWidth="120.0" text="Soyad" />
+            <TableColumn fx:id="AstsubayDogumYeriTablo" minWidth="120.0" prefWidth="120.0" text="Doğum Yeri" />
+            <TableColumn fx:id="AstsubayDogumTarihiTablo" minWidth="120.0" prefWidth="120.0" text="Doğum Tarihi" />
+            <TableColumn fx:id="AstsubayRutbeTablo" minWidth="120.0" prefWidth="120.0" text="Rütbe" />
+            <TableColumn fx:id="AstsubayKayitTarihTablo" minWidth="120.0" prefWidth="120.0" text="Kayıt Tarihi" />
+         </columns>
+      </TableView>
+      <Button layoutX="87.0" layoutY="77.0" mnemonicParsing="false" onAction="#Geri" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: 8C0001;">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0">
+               <image>
+                  <Image url="@../resim/back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Text fill="#f8f8f8" layoutX="287.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Astsubay Bilgisi">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Text>
+      <TextField fx:id="AstsubayAd" layoutX="35.0" layoutY="468.0" minHeight="20.0" minWidth="50.0" prefHeight="25.0" prefWidth="105.0" promptText="Ad Giriniz" style="-fx-background-color: #f8f8f8;" />
+      <TextField fx:id="AstsubaySoyad" layoutX="150.0" layoutY="468.0" prefHeight="25.0" prefWidth="98.0" promptText="Soyad Giriniz" style="-fx-background-color: #f8f8f8;" />
+      <TextField fx:id="AstsubayDogumYeri" layoutX="261.0" layoutY="468.0" minWidth="76.0" prefHeight="25.0" prefWidth="115.0" promptText="Dogum Yeri Giriniz" style="-fx-background-color: #f8f8f8;" />
+      <TextField fx:id="AstsubayDogumTarihi" layoutX="381.0" layoutY="468.0" minWidth="83.0" prefHeight="25.0" prefWidth="126.0" promptText="Doğum Tarihi Giriniz" style="-fx-background-color: #f8f8f8;" />
+      <TextField fx:id="AstsubayRutbe" layoutX="513.0" layoutY="468.0" minWidth="83.0" prefHeight="25.0" prefWidth="105.0" promptText="Rütbe Giriniz" style="-fx-background-color: #f8f8f8;" />
+      <Button layoutX="241.0" layoutY="541.0" mnemonicParsing="false" onAction="#Ekle" style="-fx-background-color: #8C0001;" text="EKLE" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="413.0" layoutY="541.0" mnemonicParsing="false" onAction="#Yenile" style="-fx-background-color: #8C0001;" text="Yenile" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <TextField fx:id="AstsubayTarih" layoutX="625.0" layoutY="468.0" prefHeight="25.0" prefWidth="105.0" promptText="Tarih Giriniz" />
+      <Label fx:id="AstsubayLabel" layoutX="227.0" layoutY="506.0" prefHeight="35.0" prefWidth="180.0" style="-fx-background-color: #181818;" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

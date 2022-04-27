@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="MemurPane" prefHeight="600.0" prefWidth="766.0" style="-fx-background-color: #181818;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kislayonetim.MemurController">
+   <children>
+      <TableView fx:id="MemurTablo" layoutX="12.0" layoutY="121.0" prefHeight="343.0" prefWidth="743.0" style="-fx-background-color: #181818;">
+         <columns>
+            <TableColumn fx:id="MemurTabloAd" minWidth="150.0" prefWidth="150.0" text="Ad" />
+            <TableColumn fx:id="MemurTabloSoyad" minWidth="150.0" prefWidth="150.0" text="Soyad" />
+            <TableColumn fx:id="MemurDogumYeriTablo" minWidth="150.0" prefWidth="150.0" text="Doğum Yeri" />
+            <TableColumn fx:id="MemurDogumTarihiTablo" minWidth="150.0" prefWidth="150.0" text="Doğum Tarihi" />
+            <TableColumn fx:id="MemurKayitTarihiTablo" minWidth="150.0" prefWidth="150.0" text="Kayıt Tarihi" />
+         </columns>
+      </TableView>
+      <Button layoutX="77.0" layoutY="67.0" mnemonicParsing="false" onAction="#Geri" prefHeight="30.0" prefWidth="30.0">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0">
+               <image>
+                  <Image url="@../resim/back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Text fill="#f8f8f8" layoutX="274.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Memur Bilgisi">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Text>
+      <TextField fx:id="MemurAd" layoutX="39.0" layoutY="476.0" minHeight="20.0" minWidth="50.0" prefHeight="25.0" prefWidth="108.0" promptText="Ad Giriniz" style="-fx-background-color: #f8f8f8;" />
+      <TextField fx:id="MemurSoyad" layoutX="177.0" layoutY="476.0" prefHeight="25.0" prefWidth="116.0" promptText="Soyad Giriniz" style="-fx-background-color: #f8f8f8;" />
+      <TextField fx:id="MemurDogumYeri" layoutX="320.0" layoutY="476.0" minWidth="108.0" prefHeight="25.0" prefWidth="116.0" promptText="Dogum Yeri Giriniz" style="-fx-background-color: #f8f8f8;" />
+      <TextField fx:id="MemurDogumTarihi" layoutX="467.0" layoutY="476.0" minWidth="109.0" prefHeight="25.0" prefWidth="126.0" promptText="Doğum Tarihi Giriniz" style="-fx-background-color: #f8f8f8;" />
+      <TextField fx:id="MemurTarih" layoutX="634.0" layoutY="476.0" prefHeight="25.0" prefWidth="108.0" promptText="Tarih Giriniz" />
+      <Button layoutX="266.0" layoutY="554.0" mnemonicParsing="false" onAction="#Ekle" style="-fx-background-color: #8C0001;" text="EKLE" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="404.0" layoutY="554.0" mnemonicParsing="false" onAction="#Yenile" style="-fx-background-color: #8C0001;" text="Yenile" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Label fx:id="MemurLabel" layoutX="245.0" layoutY="519.0" prefHeight="35.0" prefWidth="180.0" style="-fx-background-color: #181818;" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

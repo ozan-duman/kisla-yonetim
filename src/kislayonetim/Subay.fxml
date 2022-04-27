@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="SubayPane" prefHeight="600.0" prefWidth="766.0" style="-fx-background-color: #181818;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kislayonetim.SubayController">
+   <children>
+      <TableView fx:id="SubayTablo" layoutX="22.0" layoutY="165.0" prefHeight="292.0" prefWidth="722.0" style="-fx-background-color: #181818;">
+         <columns>
+            <TableColumn fx:id="SubayAdTablo" minWidth="120.0" prefWidth="120.0" text="Ad" />
+            <TableColumn fx:id="SubaySoyadTablo" minWidth="120.0" prefWidth="120.0" text="Soyad" />
+            <TableColumn fx:id="SubayDogumYeriTablo" minWidth="120.0" prefWidth="120.0" text="Doğum Yeri" />
+            <TableColumn fx:id="SubayDogumTarihiTablo" minWidth="120.0" prefWidth="120.0" text="Doğum Tarihi" />
+            <TableColumn fx:id="SubayRutbeTablo" minWidth="120.0" prefWidth="120.0" text="Rütbe" />
+            <TableColumn fx:id="SubayKayitTarihTablo" minWidth="120.0" prefWidth="120.0" text="Kayıt Tarihi" />
+         </columns>
+      </TableView>
+      <Button layoutX="107.0" layoutY="97.0" mnemonicParsing="false" onAction="#Geri" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: 8C0001;">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0">
+               <image>
+                  <Image url="@../resim/back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Text fill="#f8f8f8" layoutX="305.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subay Bilgisi">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Text>
+      <TextField fx:id="SubayAd" layoutX="32.0" layoutY="488.0" minHeight="20.0" minWidth="50.0" prefHeight="25.0" prefWidth="108.0" promptText="Ad Giriniz" style="-fx-background-color: #f8f8f8;" />
+      <TextField fx:id="SubaySoyad" layoutX="152.0" layoutY="488.0" prefHeight="25.0" prefWidth="116.0" promptText="Soyad Giriniz" style="-fx-background-color: #f8f8f8;" />
+      <TextField fx:id="SubayDogumYeri" layoutX="275.0" layoutY="488.0" minWidth="108.0" prefHeight="25.0" prefWidth="116.0" promptText="Dogum Yeri Giriniz" style="-fx-background-color: #f8f8f8;" />
+      <TextField fx:id="SubayDogumTarihi" layoutX="400.0" layoutY="488.0" minWidth="109.0" prefHeight="25.0" prefWidth="126.0" promptText="Doğum Tarihi Giriniz" style="-fx-background-color: #f8f8f8;" />
+      <TextField fx:id="SubayRutbe" layoutX="535.0" layoutY="488.0" minWidth="109.0" prefHeight="25.0" prefWidth="109.0" promptText="Rütbe Giriniz" style="-fx-background-color: #f8f8f8;" />
+      <TextField fx:id="SubayTarih" layoutX="652.0" layoutY="488.0" prefHeight="25.0" prefWidth="108.0" promptText="Tarih Giriniz" />
+      <Button layoutX="269.0" layoutY="554.0" mnemonicParsing="false" onAction="#Ekle" style="-fx-background-color: #8C0001;" text="EKLE" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="413.0" layoutY="554.0" mnemonicParsing="false" onAction="#Yenile" style="-fx-background-color: #8C0001;" text="Yenile" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Label fx:id="SubayLabel" layoutX="243.0" layoutY="519.0" prefHeight="31.0" prefWidth="180.0" style="-fx-background-color: #181818;" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
